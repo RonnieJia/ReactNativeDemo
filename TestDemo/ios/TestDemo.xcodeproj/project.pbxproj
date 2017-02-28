@@ -120,6 +120,8 @@
 		2DCD954D1E0B4F2C00145EB5 /* TestDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TestDemoTests.m */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		A1483B311E65B4A9005F2CF5 /* icon2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A1483B301E65B4A9005F2CF5 /* icon2.jpg */; };
+		A1483B4D1E65B823005F2CF5 /* ShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = A1483B4C1E65B823005F2CF5 /* ShowView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -510,6 +512,9 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		A1483B301E65B4A9005F2CF5 /* icon2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon2.jpg; sourceTree = "<group>"; };
+		A1483B4B1E65B823005F2CF5 /* ShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowView.h; sourceTree = "<group>"; };
+		A1483B4C1E65B823005F2CF5 /* ShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -687,6 +692,8 @@
 			children = (
 				08859D521E651C0200BB93C7 /* TransferView.h */,
 				08859D531E651C0200BB93C7 /* TransferView.m */,
+				A1483B4B1E65B823005F2CF5 /* ShowView.h */,
+				A1483B4C1E65B823005F2CF5 /* ShowView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -996,6 +1003,7 @@
 			children = (
 				08859E471E65638400BB93C7 /* timg.jpeg */,
 				08859E3F1E65257D00BB93C7 /* icon.jpg */,
+				A1483B301E65B4A9005F2CF5 /* icon2.jpg */,
 				08859E3B1E651D5600BB93C7 /* Tools */,
 				08859D371E651C0200BB93C7 /* Basic */,
 				08859D401E651C0200BB93C7 /* Category */,
@@ -1465,6 +1473,7 @@
 				08859E101E651C0200BB93C7 /* xieyi.html in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				A1483B311E65B4A9005F2CF5 /* icon2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1558,6 +1567,7 @@
 				08859E241E651C0200BB93C7 /* TAPageControl.m in Sources */,
 				08859E281E651C0200BB93C7 /* MKAnnotationView+WebCache.m in Sources */,
 				08859E431E65261300BB93C7 /* HomeBanner.m in Sources */,
+				A1483B4D1E65B823005F2CF5 /* ShowView.m in Sources */,
 				08859E2E1E651C0200BB93C7 /* SDWebImageDecoder.m in Sources */,
 				08859DFC1E651C0200BB93C7 /* EmptyViewController.m in Sources */,
 				08859E251E651C0200BB93C7 /* SDCollectionViewCell.m in Sources */,

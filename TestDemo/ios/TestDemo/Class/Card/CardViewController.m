@@ -11,11 +11,14 @@
 #import "LossViewController.h"
 #import "RJHTTPClient+Home.h"
 #import "RJHTTPClient+Mine.h"
+#import <React/RCTRootView.h>
+#import <React/RCTBundleURLProvider.h>
 
 @interface CardViewController ()<UIActionSheetDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 @property(nonatomic, weak)UIImageView *iconImageView;
 @property(nonatomic, weak)UILabel *nameLabel;
 @property(nonatomic, weak)UILabel *cardLabel;
+@property(nonatomic, weak)RCTRootView *rootView;
 @end
 
 @implementation CardViewController
@@ -40,7 +43,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"卡务中心";
+    self.title = @"美女中心";
     weakify(self);
     [self setNavBarBtnWithType:NavBarTypeRight title:@"设置" action:^{
         SettingViewController *setting = [[SettingViewController alloc] init];
@@ -48,7 +51,9 @@
         [weakSelf.navigationController pushViewController:setting animated:YES];
         
     }];
-    
+  
+  [self createMainView];
+    /*
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, KScreenHeight-64-49)];
     [self.view addSubview:scrollView];
     
@@ -89,6 +94,22 @@
         [button addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     scrollView.contentSize = CGSizeMake(self.view.width, hearView.bottom + 50 + itemW * 2);
+     */
+}
+
+- (void)createMainView {
+  NSURL *jsCodeLocation;
+  
+  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
+  //  jsCodeLocation = [NSURL URLWithString:@"http://192.168.3.90:8081/index.ios.bundle?platform=ios&dev=true&minify=false"];
+  RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+                                                      moduleName:@"Card"
+                                               initialProperties:@{@"navigator":self.navigationController}
+                                                   launchOptions:nil];
+  self.rootView = rootView;
+  rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
+  rootView.frame = self.view.bounds;
+  [self.view addSubview:rootView];
 }
 
 - (void)uploadUserIcon {

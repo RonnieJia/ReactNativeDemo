@@ -21,8 +21,12 @@ var JSUseOCBridgeModule = NativeModules.JSUseOCBridgeModule;
 var HomeItem = require('./HomeItem');
 var HomeBanner = require('./HomeBanner');
 
-const bannerImgs = ['http://f.hiphotos.baidu.com/image/h%3D200/sign=c253602d791ed21b66c929e59d6cddae/b151f8198618367a9f738e022a738bd4b21ce573.jpg',
-                    'http://a.hiphotos.baidu.com/image/pic/item/b999a9014c086e068d8c874b00087bf40ad1cb8e.jpg'
+const bannerImgs = ['http://c.hiphotos.baidu.com/image/pic/item/574e9258d109b3de36d8265cc9bf6c81800a4c9b.jpg',
+                    'http://g.hiphotos.baidu.com/image/pic/item/42166d224f4a20a47857fef395529822720ed0bd.jpg',
+                    'http://h.hiphotos.baidu.com/image/pic/item/3ac79f3df8dcd1007dd43a15778b4710b9122fbe.jpg',
+                    // 'http://a.hiphotos.baidu.com/image/pic/item/8b82b9014a90f603a35098ab3d12b31bb151ed7e.jpg',
+                    // 'http://d.hiphotos.baidu.com/image/pic/item/86d6277f9e2f0708cbd82eeced24b899a801f279.jpg',
+
                   ];
 
 var Home = React.createClass({
@@ -56,14 +60,14 @@ var Home = React.createClass({
               <HomeItem style={styles.button}
                 title={'中国银行'}
                 desc={'中国银行掌上APP'}
-                icon={'drewr'}
+                icon={'http://c.hiphotos.baidu.com/image/pic/item/0bd162d9f2d3572c636418098e13632763d0c365.jpg'}
                 btnTag={1}
                 onClickBtn={(e) => this._handleApp(e.nativeEvent.value)}
               />
               <HomeItem style={styles.button}
                 title={'中银易商'}
                 desc={'中国银行掌上银行'}
-                icon={'yishang'}
+                icon={'http://f.hiphotos.baidu.com/image/pic/item/b17eca8065380cd7fc7960d9a444ad345982819b.jpg'}
                 btnTag={2}
                 onClickBtn={(e) => this._handleApp(e.nativeEvent.value)}
 

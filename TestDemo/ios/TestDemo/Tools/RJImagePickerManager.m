@@ -73,7 +73,7 @@
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     WaittingMBProgressHUD(KKeyWindow, @"");
     weakify(self);
-    image = [UIImage imageNamed:@"timg.jpeg"];
+    image = [UIImage imageNamed:@"icon2.jpg"];
     [[RJHTTPClient sharedInstance] uploadUserIcon:image completion:^(WebResponse *response) {
       if (response.code == WebResponseCodeSuccess) {
         SuccessMBProgressHUD(KKeyWindow, @"上传成功");

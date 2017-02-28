@@ -54,8 +54,8 @@
 - (void)createMainView {
   NSURL *jsCodeLocation;
   
-//  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
-  jsCodeLocation = [NSURL URLWithString:@"http://192.168.3.90:8081/index.ios.bundle?platform=ios&dev=true&minify=false"];
+  jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
+//  jsCodeLocation = [NSURL URLWithString:@"http://192.168.3.90:8081/index.ios.bundle?platform=ios&dev=true&minify=false"];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"Home"
                                                initialProperties:@{@"navigator":self.navigationController}
@@ -64,10 +64,6 @@
   rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
   rootView.frame = self.view.bounds;
   [self.view addSubview:rootView];
-//    NSArray *homeBanners = @[@"http://www.tjhaval.com:7363/great_wall/images/advert/img1.jpg",
-//                             @"http://www.tjhaval.com:7363/great_wall/images/advert/img2.jpg",
-//                             @"http://www.tjhaval.com:7363/great_wall/images/advert/img3.jpg"];
-  
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
