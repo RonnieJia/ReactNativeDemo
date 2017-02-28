@@ -1,0 +1,42 @@
+//
+//  PrefixHeader.pch
+//  APPFormwork
+//
+//  Created by 辉贾 on 2016/10/23.
+//  Copyright © 2016年 RJ. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import "RJFunctions.h"
+#import "FontAndColorConfig.h"
+#import "UIView+Frame.h"
+#import "UIButton+Custom.h"
+#import "UILabel+Custom.h"
+#import "UIImageView+WebCache.h"
+#import "CurrentUserInfo.h"
+#endif
+
+#define RJDebug         @"RJDebugUseTest"
+
+#if DEBUG
+#define RJLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#else
+#define RJLog(args...)    // do nothing.
+#endif
+#define RJLogBOOL(b)        RJLog(@"%@", b? @"YES": @"NO")
+#define RJLogCGPoint(p)		RJLog(@"CGPoint(%f, %f)", p.x, p.y)
+#define RJLogCGSize(s)		RJLog(@"CGSize(%f, %f)", s.width, s.height)
+#define RJLogCGRect(r)		RJLog(@"{CGRect{origin(%f, %f), size(%f, %f)}", r.origin.x, r.origin.y, r.size.width, r.size.height)
+
+#define weakify(var)   __weak typeof(var) weakSelf = var
+#define strongify(var) __strong typeof(var) strongSelf = var
+
+
+#endif /* PrefixHeader_pch */
